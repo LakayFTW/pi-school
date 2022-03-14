@@ -8,6 +8,7 @@ cgitb.enable()
 print('Content-type: text/html\r\n')
 from myclass import myclass
 # change the top most comment to current local python directory
+from API.weathercall import weathercall
 
 print ('<!DOCTYPE HTML>')
 print ('<html>\n')
@@ -22,6 +23,10 @@ print ('<body>\n')
 print ('<h1>Testing</h1>')
 
 p1 = myclass()
+wetter = weathercall()
+wetterbeschreibung = wetter.getWeatherDesc()
+print("<h1>" + wetterbeschreibung + "</h1>")
+
 print('<h3>' + str(p1.x) + '</h3>')
 
 print ('</body>')
