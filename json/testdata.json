@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"coord":{"lon":7.461,"lat":53.2316},"weather":[{"id":804,"main":"Clouds","description":"Bedeckt","icon":"04d"}],"base":"stations","main":{"temp":18.53,"feels_like":18.45,"temp_min":18.41,"temp_max":20.56,"pressure":1020,"humidity":77,"sea_level":1020,"grnd_level":1019},"visibility":10000,"wind":{"speed":2.18,"deg":31,"gust":3.12},"clouds":{"all":97},"dt":1652810973,"sys":{"type":2,"id":2037185,"country":"DE","sunrise":1652758084,"sunset":1652815514},"timezone":7200,"id":2879697,"name":"Leer","cod":200}
+=======
+{"coord":{"lon":7.461,"lat":53.2316},"weather":[{"id":804,"main":"Clouds","description":"Bedeckt","icon":"04d"}],"base":"stations","main":{"temp":10.36,"feels_like":9.62,"temp_min":9.96,"temp_max":10.56,"pressure":1018,"humidity":83},"visibility":10000,"wind":{"speed":0.45,"deg":0,"gust":2.68},"clouds":{"all":100},"dt":1651570021,"sys":{"type":2,"id":2012959,"country":"DE","sunrise":1651549958,"sunset":1651604480},"timezone":7200,"id":2879697,"name":"Leer","cod":200}
+>>>>>>> d1c4d901dc0e2b8c53d3f55a2df0d9407fe06824
