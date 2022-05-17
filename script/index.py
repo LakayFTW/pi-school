@@ -16,13 +16,19 @@ print ('<!DOCTYPE HTML>')
 print ('<html>\n')
 
 print ('<head>')
-print ('<title>Test</title>')
-print ('<link rel="stylesheet" href="/css/style.css" type="text/css">')
+print ('<title>Raspberry Wetterstation</title>')
+print ('<link rel="stylesheet" href="../css/style.css" type="text/css">')
 print ('</head>')
 #endregion
 
-print ('<body>\n')
+print ('<body class="background-dark body">\n')
 
+print ('<div class="header space-x justify-between">')
+print ('<p>Wetterstation</p>')
+print ('<button class="button">Test</button>')
+print ('</div name="header">')
+
+print ('<div class="mainview">')
 print ('<h1>Testing</h1>')
 
 #region python code goes brrrr
@@ -33,6 +39,8 @@ wetterbeschreibung = wetter.getWeatherDesc()
 print("<h1>" + wetterbeschreibung + "</h1>")
 
 print('<h3>' + str(p1.x) + '</h3>')
+
+print('</div>')
 
 #endregion
 
