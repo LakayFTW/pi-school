@@ -1,9 +1,9 @@
-.background-dark{
+.dark-mode{
     background-color: #111418;
     color: #ADABAD;
 }
 
-.background-light{
+.light-mode{
     background-color: white;
     color: black;
 }
