@@ -1,5 +1,5 @@
-#! C:\Users\Milch\AppData\Local\Programs\Python\Python310\python.exe
 #! C:\Users\Luca\AppData\Local\Programs\Python\Python310\python.exe
+#! C:\Users\Milch\AppData\Local\Programs\Python\Python310\python.exe
 # -*- coding: UTF-8 -*-
 
 #enable debugging
@@ -11,31 +11,40 @@ from myclass import myclass
 # change the top most comment to current local python directory
 from API.weathercall import weathercall
 
-#region Header
+#region initiate/instantiate
+p1 = myclass()
+wetter = weathercall()
+#endregion
+
 print ('<!DOCTYPE HTML>')
 print ('<html>\n')
 
 print ('<head>')
-print ('<title>Test</title>')
-print ('<link rel="stylesheet" href="/css/style.css" type="text/css">')
+print ('<title>Raspberry Wetterstation</title>')
+print ('<link rel="stylesheet" href="../css/style.css" type="text/css">')
+print ('<script src="../js/themeSwitcher.js"></script>')
 print ('</head>')
-#endregion
 
-print ('<body>\n')
+print ('<body id="body" class="light-mode body">\n')
 
+print ('<div class="header space-x justify-between">')
+print ('<p>Wetterstation</p>')
+print ('<button class="button" onclick="handleSwitchDarkLight()">DayNight</button>')
+print ('</div name="header">')
+
+print ('<div class="mainview">')
 print ('<h1>Testing</h1>')
 
-#region python code goes brrrr
-
-p1 = myclass()
-wetter = weathercall()
 wetterbeschreibung = wetter.getWeatherDesc()
 print("<h1>" + wetterbeschreibung + "</h1>")
 print("<h1> Test ")
 
 print('<h3>' + str(p1.x) + '</h3>')
 
-#endregion
+print('</div>')
 
 print ('</body>')
+print ('<script>')
+print ('window.onload = checkForCookies()')
+print ('</script>')
 print ('</html>')
