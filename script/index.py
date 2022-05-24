@@ -9,7 +9,7 @@ cgitb.enable()
 print('Content-type: text/html\r\n')
 from myclass import myclass
 # change the top most comment to current local python directory
-from API.weathercall import weathercall
+from api.weathercall import weathercall
 
 #region initiate/instantiate
 p1 = myclass()
