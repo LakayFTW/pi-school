@@ -10,8 +10,10 @@
 
 .mainview{
     display: grid;
-    justify-content: center;
-    padding: 20px;
+    /* justify-content: center; */
+    padding-top : 20px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .header{
@@ -25,13 +27,21 @@
     font-size: 20px;
 }
 
-.space-x > * {
+.space-x-10 > * {
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .justify-between{
     justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
+
+.inline-block > *{
+    display: inline-block;
 }
 
 .button{
@@ -53,4 +63,19 @@
 
 .button:hover{
     background-color: #11CBED;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    border: 1px solid #ADABAD;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #21252b;
 }
