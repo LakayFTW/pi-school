@@ -8,5 +8,6 @@ cursor = conn.cursor()
 cursor.execute("SELECT * from lehrgang")
 data = cursor.fetchone()
 print(data)
+#test comment
 
 conn.close();
