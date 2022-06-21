@@ -10,8 +10,10 @@ connect = mysql.connector.connect(
 
 cursor = connect.cursor()
 
-cursor.execute("SELECT days.datetime AS datetime, temperatures.temp AS temp FROM days INNER JOIN temperatures ON days.ID = temperatures.ID")
+cursor.execute("SELECT days.datetime, temperatures.temp FROM days INNER JOIN temperatures ON days.ID = temperatures.ID")
 
 result = cursor.fetchall()
+print("Row Count: ", len(result))
 for x in result:
-    print(x)
+    print(x[0])
+    print(x[1])
