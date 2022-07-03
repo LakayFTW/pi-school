@@ -17,9 +17,7 @@ cursor.execute("SELECT days.datetime, temperatures.temp FROM days INNER JOIN tem
 result = cursor.fetchall()
 print("Row Count: ", len(result))
 
-json_obj = {}
-json_obj['temperatures'] = []
-data = []
+data = {}
 
 counter = 0;
 for x in result:
@@ -27,8 +25,8 @@ for x in result:
     temp = str(x[1])
 
     item = {}
-    item[counter] ={'date': date, 'temp': temp}
-    data.append(item)
+    item ={'date': date, 'temp': temp}
+    data[counter].append(item)
 
     counter += 1
     
