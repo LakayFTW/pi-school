@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="js/themeSwitcher.js"></script>
     <script src="js/getToday.js"></script>
+    <script src="js/jsonExtractor.js"></script>
     <title>Raspberry Wetterstation</title>
 </head>
 <body id="body" class="light-mode body">
@@ -44,5 +45,7 @@
 <script>
     window.onload = checkForCookies();
     window.onload = getToday();
+    window.onload = getDBEntriesFromJson();
+    window.onload = getWeatherFromAPI();
 </script>
 </html>
