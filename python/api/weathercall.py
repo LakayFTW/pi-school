@@ -15,13 +15,13 @@ class weathercall:
     
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    if (os.path.exists('../json/testdata.json')):
-        os.remove('../json/testdata.json')  
+    if (os.path.exists('./json/testdata.json')):
+        os.remove('./json/testdata.json')  
     
-    with open('../json/testdata.json', 'w') as file:
+    with open('./json/testdata.json', 'w') as file:
         file.write(response.text) 
 
-    file = open('../json/testdata.json', 'r')
+    file = open('./json/testdata.json', 'r')
     file_load = json.load(file)
 
     def getWeatherDesc(self):
