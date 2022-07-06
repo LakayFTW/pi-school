@@ -20,6 +20,7 @@ function getWeatherFromAPI() {
     })
     .then(jsondata => {
         var json = jsondata;
+        pasteWeatherDataToHeader(jsondata);
     });
 }
 
@@ -53,4 +54,20 @@ function pasteResultToHtmlTable(json){
         tr.appendChild(td1);
         table.appendChild(tr)
     }
+}
+
+function pasteWeatherDataToHeader(json){
+    console.log(json.name);
+    console.log(json.weather[0].description);
+    console.log(json.main.temp);
+
+    var city = json.name;
+    var weather = json.weather[0].description;
+    var temp = json.main.temp.toString();
+
+    var newTemp = temp.split(".")[0];
+
+    var w = document.getElementById("weatherdata");
+
+    w.innerText = city + ": " + weather + " " + newTemp + "°";
 }

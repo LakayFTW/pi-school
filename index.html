@@ -13,18 +13,21 @@
 <body id="body" class="light-mode body">
     <div class="header space-x-10 justify-between">
         <p>Wetterstation</p>
+        <div class="inline-block">
+            <p id="weatherdata"></p>
+        </div>
         <button class="button" onclick="handleSwitchDarkLight()">DayNight</button>
     </div>
     <div class="mainview">
-        <div class="justify-between flex">
+        <div class="justify-between flex items-center">
             <button class="button">< Gestern</button>
-            <button class="button">Morgen ></button>
-        </div>
-        <div name="table">
             <div class="inline-block">
-                <h1>Temperaturen Innenraum:</h1>
+                <h2>Heute:</h2>
                 <h2 id="currentDate"></h2>
             </div>
+            <button class="button">Morgen ></button>
+        </div>
+        <div class="py-5">
             <table id="table">
                 <tr>
                     <th>Zeit</th>
@@ -38,6 +41,6 @@
     window.onload = checkForCookies();
     window.onload = getToday();
     window.onload = getDBEntriesFromJson();
-    // window.onload = getWeatherFromAPI();
+    window.onload = getWeatherFromAPI();
 </script>
 </html>
